@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">  
+    <title>Memory Card Game </title>
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <body>
+<div class="wrapper">
+      <ul class="cards">
+        <li class="card">
+          <div class="view front-view">
+            <img src="images/que_icon.svg" alt="icon">
+          </div>
+          <div class="view back-view">
+            <img src="images/img-1.png" alt="card-img">
+          </div>
+        </li>
+        <li class="card">
+          <div class="view front-view">
+            <img src="images/que_icon.svg" alt="icon">
+          </div>
+          <div class="view back-view">
+            <img src="images/img-6.png" alt="card-img">
+          </div>
+        </li>
+        <li class="card">
+            <div class="view front-view">
+              <img src="images/que_icon.svg" alt="icon">
+            </div>
+            <div class="view back-view">
+              <img src="images/img-2.png" alt="card-img">
+            </div>
+          </li>
+        <li class="card">
+            <div class="view front-view">
+              <img src="images/que_icon.svg" alt="icon">
+            </div>
+            <div class="view back-view">
+              <img src="images/img-8.png" alt="card-img">
+            </div>
+          </li>
+        <li class="card">
+          <div class="view front-view">
+            <img src="images/que_icon.svg" alt="icon">
+          </div>
+          <div class="view back-view">
+            <img src="images/img-1.png" alt="card-img">
+          </div>
+        </li>
+        <li class="card">
+          <div class="view front-view">
+            <img src="images/que_icon.svg" alt="icon">
+          </div>
+          <div class="view back-view">
+            <img src="images/img-6.png" alt="card-img">
+          </div>
+        </li>
+        <li class="card">
+            <div class="view front-view">
+              <img src="images/que_icon.svg" alt="icon">
+            </div>
+            <div class="view back-view">
+              <img src="images/img-8.png" alt="card-img">
+            </div>
+          </li>
+          <li class="card">
+            <div class="view front-view">
+              <img src="images/que_icon.svg" alt="icon">
+            </div>
+            <div class="view back-view">
+              <img src="images/img-2.png" alt="card-img">
+            </div>
+          </li>
+          <div class="details">
+            <p class="time">Time: <span><b>20</b>s</span></p>
+            <p class="flips">Flips: <span><b>0</b></span></p>
+            <button>Refresh</button>
+          </div>
+      </ul>
+      <div class="bttn">
+        <a href="index1.html" > <button name="button" class="btn" autofocus>المرحلة السابقة</button></a>
+            <a href="index3.html" > <button name="button" class="btn" autofocus>المرحلة التالية</button></a>
+    </div>
+    </div>
+    
+    <script >
+    const _0x13bf70=_0x182a;function _0x3a7a(){const _0x17435a=['1292970gCvIuA','.back-view\x20img','addEventListener','forEach','16XfgYgD','click','.time\x20b','46745CbqLVU','querySelector','random','3141576KuwUYV','4805718FgukUv','add','4896577izYuhS','src','shake','.card','flip','174921aUnBLj','.details\x20button','innerText','20UwWyIr','querySelectorAll','remove','removeEventListener','classList','4279870JAhAsz'];_0x3a7a=function(){return _0x17435a;};return _0x3a7a();}(function(_0x3a0653,_0x572c67){const _0x515bf5=_0x182a,_0x26c211=_0x3a0653();while(!![]){try{const _0x103320=-parseInt(_0x515bf5(0x159))/0x1+-parseInt(_0x515bf5(0x152))/0x2+-parseInt(_0x515bf5(0x164))/0x3*(parseInt(_0x515bf5(0x167))/0x4)+parseInt(_0x515bf5(0x151))/0x5+-parseInt(_0x515bf5(0x15d))/0x6+parseInt(_0x515bf5(0x15f))/0x7+-parseInt(_0x515bf5(0x156))/0x8*(-parseInt(_0x515bf5(0x15c))/0x9);if(_0x103320===_0x572c67)break;else _0x26c211['push'](_0x26c211['shift']());}catch(_0x510ca6){_0x26c211['push'](_0x26c211['shift']());}}}(_0x3a7a,0x723b7));const cards=document[_0x13bf70(0x168)](_0x13bf70(0x162)),timeTag=document['querySelector'](_0x13bf70(0x158)),flipsTag=document[_0x13bf70(0x15a)]('.flips\x20b'),refreshBtn=document[_0x13bf70(0x15a)](_0x13bf70(0x165));let maxTime=0x14,timeLeft=maxTime,flips=0x0,matchedCard=0x0,disableDeck=![],isPlaying=![],cardOne,cardTwo,timer;function initTimer(){const _0x5c23d4=_0x13bf70;if(timeLeft<=0x0)return clearInterval(timer);timeLeft--,timeTag[_0x5c23d4(0x166)]=timeLeft;}function flipCard({target:_0x4b445a}){const _0x47cb9d=_0x13bf70;!isPlaying&&(isPlaying=!![],timer=setInterval(initTimer,0x3e8));if(_0x4b445a!==cardOne&&!disableDeck&&timeLeft>0x0){flips++,flipsTag['innerText']=flips,_0x4b445a[_0x47cb9d(0x150)][_0x47cb9d(0x15e)]('flip');if(!cardOne)return cardOne=_0x4b445a;cardTwo=_0x4b445a,disableDeck=!![];let _0xf8ebb4=cardOne['querySelector'](_0x47cb9d(0x153))[_0x47cb9d(0x160)],_0x19e235=cardTwo[_0x47cb9d(0x15a)](_0x47cb9d(0x153))[_0x47cb9d(0x160)];matchCards(_0xf8ebb4,_0x19e235);}}function matchCards(_0x3c6f8b,_0x4b7d48){const _0x1b6c34=_0x13bf70;if(_0x3c6f8b===_0x4b7d48){matchedCard++;if(matchedCard==0x4&&timeLeft>0x0)return clearInterval(timer);return cardOne[_0x1b6c34(0x16a)](_0x1b6c34(0x157),flipCard),cardTwo[_0x1b6c34(0x16a)](_0x1b6c34(0x157),flipCard),cardOne=cardTwo='',disableDeck=![];}setTimeout(()=>{const _0x20aa16=_0x1b6c34;cardOne[_0x20aa16(0x150)][_0x20aa16(0x15e)](_0x20aa16(0x161)),cardTwo[_0x20aa16(0x150)][_0x20aa16(0x15e)](_0x20aa16(0x161));},0x190),setTimeout(()=>{const _0xaab34=_0x1b6c34;cardOne[_0xaab34(0x150)][_0xaab34(0x169)](_0xaab34(0x161),'flip'),cardTwo['classList'][_0xaab34(0x169)](_0xaab34(0x161),_0xaab34(0x163)),cardOne=cardTwo='',disableDeck=![];},0x4b0);}function _0x182a(_0x4ac94d,_0x2b53bf){const _0x3a7abe=_0x3a7a();return _0x182a=function(_0x182aca,_0x51de28){_0x182aca=_0x182aca-0x150;let _0x12d54e=_0x3a7abe[_0x182aca];return _0x12d54e;},_0x182a(_0x4ac94d,_0x2b53bf);}function shuffleCard(){const _0x327d17=_0x13bf70;timeLeft=maxTime,flips=matchedCard=0x0,cardOne=cardTwo='',clearInterval(timer),timeTag[_0x327d17(0x166)]=timeLeft,flipsTag['innerText']=flips,disableDeck=isPlaying=![];let _0x1fc709=[0x1,0x2,0x3,0x4,0x1,0x2,0x3,0x4];_0x1fc709['sort'](()=>Math[_0x327d17(0x15b)]()>0.5?0x1:-0x1),cards[_0x327d17(0x155)]((_0x4e8c10,_0x13bf64)=>{const _0x1e5dbf=_0x327d17;_0x4e8c10['classList'][_0x1e5dbf(0x169)](_0x1e5dbf(0x163));let _0x262097=_0x4e8c10[_0x1e5dbf(0x15a)](_0x1e5dbf(0x153));setTimeout(()=>{const _0x45ba7a=_0x1e5dbf;_0x262097[_0x45ba7a(0x160)]='images/img-'+_0x1fc709[_0x13bf64]+'.png';},0x1f4),_0x4e8c10[_0x1e5dbf(0x154)](_0x1e5dbf(0x157),flipCard);});}shuffleCard(),refreshBtn[_0x13bf70(0x154)](_0x13bf70(0x157),shuffleCard),cards[_0x13bf70(0x155)](_0x51ec39=>{const _0x37cfa9=_0x13bf70;_0x51ec39[_0x37cfa9(0x154)](_0x37cfa9(0x157),flipCard);});
+        </script>
+
+  </body>
+</html>

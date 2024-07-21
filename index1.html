@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">  
+    <title>Memory Card Game </title>
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <body>
+<div class="wrapper">
+      <ul class="cards">
+        <li class="card">
+          <div class="view front-view">
+            <img src="images/que_icon.svg" alt="icon">
+          </div>
+          <div class="view back-view">
+            <img src="images/img-1.png" alt="card-img">
+          </div>
+        </li>
+        <li class="card">
+          <div class="view front-view">
+            <img src="images/que_icon.svg" alt="icon">
+          </div>
+          <div class="view back-view">
+            <img src="images/img-6.png" alt="card-img">
+          </div>
+        </li>
+        <li class="card">
+            <div class="view front-view">
+              <img src="images/que_icon.svg" alt="icon">
+            </div>
+            <div class="view back-view">
+              <img src="images/img-8.png" alt="card-img">
+            </div>
+          </li>
+        <li class="card">
+          <div class="view front-view">
+            <img src="images/que_icon.svg" alt="icon">
+          </div>
+          <div class="view back-view">
+            <img src="images/img-1.png" alt="card-img">
+          </div>
+        </li>
+        <li class="card">
+          <div class="view front-view">
+            <img src="images/que_icon.svg" alt="icon">
+          </div>
+          <div class="view back-view">
+            <img src="images/img-6.png" alt="card-img">
+          </div>
+        </li>
+        <li class="card">
+            <div class="view front-view">
+              <img src="images/que_icon.svg" alt="icon">
+            </div>
+            <div class="view back-view">
+              <img src="images/img-8.png" alt="card-img">
+            </div>
+          </li>
+          <div class="details">
+            <p class="time">Time: <span><b>20</b>s</span></p>
+            <p class="flips">Flips: <span><b>0</b></span></p>
+            <button>Refresh</button>
+          </div>
+      </ul>
+      <div class="bttn">
+        <a href="index.html" > <button name="button" class="btn" autofocus>المرحلة السابقة</button></a>
+            <a href="index2.html" > <button name="button" class="btn" autofocus>المرحلة التالية</button></a>
+    </div>
+    </div>
+    
+    <script >
+    const _0x4ea71b=_0x24de;(function(_0x1ac32d,_0x430ba4){const _0xea533d=_0x24de,_0x3a25ce=_0x1ac32d();while(!![]){try{const _0x3e011f=parseInt(_0xea533d(0x17a))/0x1+parseInt(_0xea533d(0x190))/0x2+parseInt(_0xea533d(0x17f))/0x3+parseInt(_0xea533d(0x17d))/0x4*(parseInt(_0xea533d(0x17c))/0x5)+parseInt(_0xea533d(0x18e))/0x6*(-parseInt(_0xea533d(0x179))/0x7)+-parseInt(_0xea533d(0x177))/0x8*(-parseInt(_0xea533d(0x182))/0x9)+-parseInt(_0xea533d(0x18f))/0xa;if(_0x3e011f===_0x430ba4)break;else _0x3a25ce['push'](_0x3a25ce['shift']());}catch(_0x6a4ebc){_0x3a25ce['push'](_0x3a25ce['shift']());}}}(_0x2ad0,0xec734));const cards=document[_0x4ea71b(0x17b)](_0x4ea71b(0x176)),timeTag=document['querySelector'](_0x4ea71b(0x186)),flipsTag=document[_0x4ea71b(0x181)](_0x4ea71b(0x192)),refreshBtn=document[_0x4ea71b(0x181)]('.details\x20button');let maxTime=0x14,timeLeft=maxTime,flips=0x0,matchedCard=0x0,disableDeck=![],isPlaying=![],cardOne,cardTwo,timer;function initTimer(){if(timeLeft<=0x0)return clearInterval(timer);timeLeft--,timeTag['innerText']=timeLeft;}function flipCard({target:_0x21de45}){const _0x21cdd9=_0x4ea71b;!isPlaying&&(isPlaying=!![],timer=setInterval(initTimer,0x3e8));if(_0x21de45!==cardOne&&!disableDeck&&timeLeft>0x0){flips++,flipsTag[_0x21cdd9(0x193)]=flips,_0x21de45['classList'][_0x21cdd9(0x188)](_0x21cdd9(0x178));if(!cardOne)return cardOne=_0x21de45;cardTwo=_0x21de45,disableDeck=!![];let _0x2f199a=cardOne[_0x21cdd9(0x181)](_0x21cdd9(0x18b))['src'],_0x10368d=cardTwo[_0x21cdd9(0x181)](_0x21cdd9(0x18b))[_0x21cdd9(0x18d)];matchCards(_0x2f199a,_0x10368d);}}function matchCards(_0x2a0b19,_0x4bc5b4){const _0x2d3301=_0x4ea71b;if(_0x2a0b19===_0x4bc5b4){matchedCard++;if(matchedCard==0x3&&timeLeft>0x0)return clearInterval(timer);return cardOne[_0x2d3301(0x184)](_0x2d3301(0x183),flipCard),cardTwo[_0x2d3301(0x184)](_0x2d3301(0x183),flipCard),cardOne=cardTwo='',disableDeck=![];}setTimeout(()=>{const _0x5603e4=_0x2d3301;cardOne[_0x5603e4(0x189)][_0x5603e4(0x188)]('shake'),cardTwo[_0x5603e4(0x189)][_0x5603e4(0x188)](_0x5603e4(0x187));},0x190),setTimeout(()=>{const _0x5e485a=_0x2d3301;cardOne[_0x5e485a(0x189)]['remove'](_0x5e485a(0x187),_0x5e485a(0x178)),cardTwo[_0x5e485a(0x189)][_0x5e485a(0x191)](_0x5e485a(0x187),_0x5e485a(0x178)),cardOne=cardTwo='',disableDeck=![];},0x4b0);}function shuffleCard(){const _0x2d792e=_0x4ea71b;timeLeft=maxTime,flips=matchedCard=0x0,cardOne=cardTwo='',clearInterval(timer),timeTag['innerText']=timeLeft,flipsTag[_0x2d792e(0x193)]=flips,disableDeck=isPlaying=![];let _0x31730d=[0x1,0x2,0x3,0x1,0x2,0x3];_0x31730d[_0x2d792e(0x194)](()=>Math[_0x2d792e(0x18c)]()>0.5?0x1:-0x1),cards[_0x2d792e(0x180)]((_0x25602c,_0x440e8f)=>{const _0x3da945=_0x2d792e;_0x25602c['classList'][_0x3da945(0x191)](_0x3da945(0x178));let _0x961813=_0x25602c[_0x3da945(0x181)]('.back-view\x20img');setTimeout(()=>{const _0x722340=_0x3da945;_0x961813['src']=_0x722340(0x18a)+_0x31730d[_0x440e8f]+_0x722340(0x17e);},0x1f4),_0x25602c[_0x3da945(0x185)](_0x3da945(0x183),flipCard);});}function _0x2ad0(){const _0x5d66d5=['innerText','sort','.card','5672iTmmZY','flip','572327KKPjtU','705358oLwGrA','querySelectorAll','15KwgliC','1373524WpBrFj','.png','1757619QPkFKt','forEach','querySelector','4194RyftOZ','click','removeEventListener','addEventListener','.time\x20b','shake','add','classList','images/img-','.back-view\x20img','random','src','18eJBNzr','17900860hucegL','704202eSMuwP','remove','.flips\x20b'];_0x2ad0=function(){return _0x5d66d5;};return _0x2ad0();}function _0x24de(_0x34b883,_0xf00b7e){const _0x2ad05a=_0x2ad0();return _0x24de=function(_0x24de3d,_0x419500){_0x24de3d=_0x24de3d-0x176;let _0x1edd09=_0x2ad05a[_0x24de3d];return _0x1edd09;},_0x24de(_0x34b883,_0xf00b7e);}shuffleCard(),refreshBtn['addEventListener'](_0x4ea71b(0x183),shuffleCard),cards[_0x4ea71b(0x180)](_0x482f0c=>{const _0x56e15d=_0x4ea71b;_0x482f0c[_0x56e15d(0x185)](_0x56e15d(0x183),flipCard);});
+        </script>
+
+  </body>
+</html>

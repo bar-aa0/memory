@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">  
+    <title>Memory Card Game </title>
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <body>
+<div class="wrapper">
+      <ul class="cards">
+        <li class="card">
+          <div class="view front-view">
+            <img src="images/que_icon.svg" alt="icon">
+          </div>
+          <div class="view back-view">
+            <img src="images/img-1.png" alt="card-img">
+          </div>
+        </li>
+        <li class="card">
+            <div class="view front-view">
+              <img src="images/que_icon.svg" alt="icon">
+            </div>
+            <div class="view back-view">
+              <img src="images/img-7.png" alt="card-img">
+            </div>
+          </li>
+        <li class="card">
+          <div class="view front-view">
+            <img src="images/que_icon.svg" alt="icon">
+          </div>
+          <div class="view back-view">
+            <img src="images/img-6.png" alt="card-img">
+          </div>
+        </li>
+        <li class="card">
+            <div class="view front-view">
+              <img src="images/que_icon.svg" alt="icon">
+            </div>
+            <div class="view back-view">
+              <img src="images/img-2.png" alt="card-img">
+            </div>
+          </li>
+        <li class="card">
+            <div class="view front-view">
+              <img src="images/que_icon.svg" alt="icon">
+            </div>
+            <div class="view back-view">
+              <img src="images/img-8.png" alt="card-img">
+            </div>
+          </li>
+        <li class="card">
+          <div class="view front-view">
+            <img src="images/que_icon.svg" alt="icon">
+          </div>
+          <div class="view back-view">
+            <img src="images/img-1.png" alt="card-img">
+          </div>
+        </li>
+        <li class="card">
+          <div class="view front-view">
+            <img src="images/que_icon.svg" alt="icon">
+          </div>
+          <div class="view back-view">
+            <img src="images/img-6.png" alt="card-img">
+          </div>
+        </li>
+        <li class="card">
+            <div class="view front-view">
+              <img src="images/que_icon.svg" alt="icon">
+            </div>
+            <div class="view back-view">
+              <img src="images/img-8.png" alt="card-img">
+            </div>
+          </li>
+          <li class="card">
+            <div class="view front-view">
+              <img src="images/que_icon.svg" alt="icon">
+            </div>
+            <div class="view back-view">
+              <img src="images/img-2.png" alt="card-img">
+            </div>
+          </li>
+          <li class="card">
+            <div class="view front-view">
+              <img src="images/que_icon.svg" alt="icon">
+            </div>
+            <div class="view back-view">
+              <img src="images/img-7.png" alt="card-img">
+            </div>
+          </li>
+          <div class="details">
+            <p class="time">Time: <span><b>30</b>s</span></p>
+            <p class="flips">Flips: <span><b>0</b></span></p>
+            <button>Refresh</button>
+          </div>
+      </ul>
+      <div class="bttn">
+        <a href="index2.html" > <button name="button" class="btn" autofocus>المرحلة السابقة</button></a>
+            <a href="index5.html" > <button name="button" class="btn" autofocus>المرحلة التالية</button></a>
+    </div>
+    </div>
+    
+    <script>
+   const _0x17aacd=_0x2e47;(function(_0x22e4a4,_0x29cad8){const _0x54cc5=_0x2e47,_0x410375=_0x22e4a4();while(!![]){try{const _0x1b3111=-parseInt(_0x54cc5(0x9a))/0x1*(parseInt(_0x54cc5(0x84))/0x2)+parseInt(_0x54cc5(0x90))/0x3*(-parseInt(_0x54cc5(0x8f))/0x4)+-parseInt(_0x54cc5(0x91))/0x5+-parseInt(_0x54cc5(0x8e))/0x6*(parseInt(_0x54cc5(0x7e))/0x7)+-parseInt(_0x54cc5(0x80))/0x8*(-parseInt(_0x54cc5(0x86))/0x9)+parseInt(_0x54cc5(0x82))/0xa+parseInt(_0x54cc5(0x7d))/0xb*(parseInt(_0x54cc5(0x7b))/0xc);if(_0x1b3111===_0x29cad8)break;else _0x410375['push'](_0x410375['shift']());}catch(_0x45c677){_0x410375['push'](_0x410375['shift']());}}}(_0x2ae4,0xca9a7));const cards=document[_0x17aacd(0x95)](_0x17aacd(0x89)),timeTag=document[_0x17aacd(0x8c)](_0x17aacd(0x88)),flipsTag=document[_0x17aacd(0x8c)](_0x17aacd(0x81)),refreshBtn=document[_0x17aacd(0x8c)](_0x17aacd(0x8b));let maxTime=0x1e,timeLeft=maxTime,flips=0x0,matchedCard=0x0,disableDeck=![],isPlaying=![],cardOne,cardTwo,timer;function initTimer(){const _0x35dc27=_0x17aacd;if(timeLeft<=0x0)return clearInterval(timer);timeLeft--,timeTag[_0x35dc27(0x85)]=timeLeft;}function flipCard({target:_0xd11423}){const _0x2c3087=_0x17aacd;!isPlaying&&(isPlaying=!![],timer=setInterval(initTimer,0x3e8));if(_0xd11423!==cardOne&&!disableDeck&&timeLeft>0x0){flips++,flipsTag['innerText']=flips,_0xd11423[_0x2c3087(0x8a)][_0x2c3087(0x7a)]('flip');if(!cardOne)return cardOne=_0xd11423;cardTwo=_0xd11423,disableDeck=!![];let _0x2be861=cardOne['querySelector'](_0x2c3087(0x87))[_0x2c3087(0x83)],_0x436ecf=cardTwo[_0x2c3087(0x8c)](_0x2c3087(0x87))[_0x2c3087(0x83)];matchCards(_0x2be861,_0x436ecf);}}function matchCards(_0x349115,_0x16c415){const _0x5ab477=_0x17aacd;if(_0x349115===_0x16c415){matchedCard++;if(matchedCard==0x5&&timeLeft>0x0)return clearInterval(timer);return cardOne['removeEventListener'](_0x5ab477(0x8d),flipCard),cardTwo[_0x5ab477(0x94)](_0x5ab477(0x8d),flipCard),cardOne=cardTwo='',disableDeck=![];}setTimeout(()=>{const _0x18aecd=_0x5ab477;cardOne['classList'][_0x18aecd(0x7a)]('shake'),cardTwo[_0x18aecd(0x8a)][_0x18aecd(0x7a)](_0x18aecd(0x97));},0x190),setTimeout(()=>{const _0x55a90e=_0x5ab477;cardOne[_0x55a90e(0x8a)][_0x55a90e(0x93)](_0x55a90e(0x97),_0x55a90e(0x96)),cardTwo[_0x55a90e(0x8a)][_0x55a90e(0x93)](_0x55a90e(0x97),'flip'),cardOne=cardTwo='',disableDeck=![];},0x4b0);}function shuffleCard(){const _0x572ae9=_0x17aacd;timeLeft=maxTime,flips=matchedCard=0x0,cardOne=cardTwo='',clearInterval(timer),timeTag[_0x572ae9(0x85)]=timeLeft,flipsTag[_0x572ae9(0x85)]=flips,disableDeck=isPlaying=![];let _0x59226c=[0x1,0x2,0x3,0x4,0x5,0x1,0x2,0x3,0x4,0x5];_0x59226c[_0x572ae9(0x92)](()=>Math[_0x572ae9(0x98)]()>0.5?0x1:-0x1),cards[_0x572ae9(0x99)]((_0x19abdb,_0x43c6bf)=>{const _0x597c45=_0x572ae9;_0x19abdb[_0x597c45(0x8a)]['remove'](_0x597c45(0x96));let _0x52d48f=_0x19abdb['querySelector']('.back-view\x20img');setTimeout(()=>{const _0x4bf54a=_0x597c45;_0x52d48f[_0x4bf54a(0x83)]=_0x4bf54a(0x7f)+_0x59226c[_0x43c6bf]+_0x4bf54a(0x79);},0x1f4),_0x19abdb[_0x597c45(0x7c)]('click',flipCard);});}function _0x2e47(_0x340dcc,_0x1f5922){const _0x2ae419=_0x2ae4();return _0x2e47=function(_0x2e47d7,_0x123696){_0x2e47d7=_0x2e47d7-0x79;let _0x196c91=_0x2ae419[_0x2e47d7];return _0x196c91;},_0x2e47(_0x340dcc,_0x1f5922);}shuffleCard(),refreshBtn['addEventListener'](_0x17aacd(0x8d),shuffleCard),cards[_0x17aacd(0x99)](_0x4e334c=>{const _0x45a15a=_0x17aacd;_0x4e334c['addEventListener'](_0x45a15a(0x8d),flipCard);});function _0x2ae4(){const _0x116228=['.png','add','15051084grbSce','addEventListener','11fQFvip','14525WTrivC','images/img-','318328uCfDYe','.flips\x20b','13341610fnPUIT','src','710HgroHT','innerText','342qHFqOT','.back-view\x20img','.time\x20b','.card','classList','.details\x20button','querySelector','click','2370ikSyzS','492532WBXdFf','39uSoqBg','72945kGeXvC','sort','remove','removeEventListener','querySelectorAll','flip','shake','random','forEach','2354YtkKHC'];_0x2ae4=function(){return _0x116228;};return _0x2ae4();}
+        </script>
+
+  </body>
+</html>

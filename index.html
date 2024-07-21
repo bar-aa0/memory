@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">  
+    <title>Memory Card Game </title>
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <body>
+<div class="wrapper">
+      <ul class="cards">
+        <li class="card">
+          <div class="view front-view">
+            <img src="images/que_icon.svg" alt="icon">
+          </div>
+          <div class="view back-view">
+            <img src="images/img-1.png" alt="card-img">
+          </div>
+        </li>
+        <li class="card">
+          <div class="view front-view">
+            <img src="images/que_icon.svg" alt="icon">
+          </div>
+          <div class="view back-view">
+            <img src="images/img-6.png" alt="card-img">
+          </div>
+        </li>
+        <li class="card">
+          <div class="view front-view">
+            <img src="images/que_icon.svg" alt="icon">
+          </div>
+          <div class="view back-view">
+            <img src="images/img-1.png" alt="card-img">
+          </div>
+        </li>
+        <li class="card">
+          <div class="view front-view">
+            <img src="images/que_icon.svg" alt="icon">
+          </div>
+          <div class="view back-view">
+            <img src="images/img-6.png" alt="card-img">
+          </div>
+        </li>
+        <div class="details">
+          <p class="time">Time: <span><b>10</b>s</span></p>
+          <p class="flips">Flips: <span><b>0</b></span></p>
+          <button>Refresh</button>
+        </div>
+      </ul>
+      <div class="bttn">
+     <button name="button" class="btn" autofocus>المرحلة السابقة</button>
+     <a href="index1.html" ><button name="button" class="btn" autofocus>المرحلة التالية</button></a>
+    </div>
+    </div>
+    
+    <script >
+   const _0xd7c0cd=_0x4630;(function(_0x3bd548,_0x38cbec){const _0xfbf7f=_0x4630,_0x4cbbaf=_0x3bd548();while(!![]){try{const _0x40362d=parseInt(_0xfbf7f(0x12c))/0x1*(parseInt(_0xfbf7f(0x136))/0x2)+-parseInt(_0xfbf7f(0x128))/0x3*(parseInt(_0xfbf7f(0x12b))/0x4)+parseInt(_0xfbf7f(0x125))/0x5*(parseInt(_0xfbf7f(0x133))/0x6)+parseInt(_0xfbf7f(0x121))/0x7*(parseInt(_0xfbf7f(0x11d))/0x8)+-parseInt(_0xfbf7f(0x131))/0x9*(-parseInt(_0xfbf7f(0x123))/0xa)+-parseInt(_0xfbf7f(0x126))/0xb*(parseInt(_0xfbf7f(0x13d))/0xc)+parseInt(_0xfbf7f(0x12a))/0xd*(-parseInt(_0xfbf7f(0x122))/0xe);if(_0x40362d===_0x38cbec)break;else _0x4cbbaf['push'](_0x4cbbaf['shift']());}catch(_0x548b4c){_0x4cbbaf['push'](_0x4cbbaf['shift']());}}}(_0x5e3a,0x1c984));const cards=document['querySelectorAll'](_0xd7c0cd(0x127)),timeTag=document[_0xd7c0cd(0x120)](_0xd7c0cd(0x132)),flipsTag=document[_0xd7c0cd(0x120)](_0xd7c0cd(0x124)),refreshBtn=document['querySelector'](_0xd7c0cd(0x137));let maxTime=0xa,timeLeft=maxTime,flips=0x0,matchedCard=0x0,disableDeck=![],isPlaying=![],cardOne,cardTwo,timer;function initTimer(){const _0x500524=_0xd7c0cd;if(timeLeft<=0x0)return clearInterval(timer);timeLeft--,timeTag[_0x500524(0x13b)]=timeLeft;}function flipCard({target:_0x551513}){const _0x38f699=_0xd7c0cd;!isPlaying&&(isPlaying=!![],timer=setInterval(initTimer,0x3e8));if(_0x551513!==cardOne&&!disableDeck&&timeLeft>0x0){flips++,flipsTag[_0x38f699(0x13b)]=flips,_0x551513[_0x38f699(0x13c)][_0x38f699(0x135)](_0x38f699(0x12e));if(!cardOne)return cardOne=_0x551513;cardTwo=_0x551513,disableDeck=!![];let _0x447d9e=cardOne[_0x38f699(0x120)](_0x38f699(0x139))[_0x38f699(0x138)],_0x1fac1a=cardTwo[_0x38f699(0x120)](_0x38f699(0x139))['src'];matchCards(_0x447d9e,_0x1fac1a);}}function _0x4630(_0xb4da17,_0x3ebe28){const _0x5e3a3d=_0x5e3a();return _0x4630=function(_0x46308f,_0x485d61){_0x46308f=_0x46308f-0x11d;let _0x22f32e=_0x5e3a3d[_0x46308f];return _0x22f32e;},_0x4630(_0xb4da17,_0x3ebe28);}function matchCards(_0x19f63b,_0x3a709b){const _0x318c82=_0xd7c0cd;if(_0x19f63b===_0x3a709b){matchedCard++;if(matchedCard==0x2&&timeLeft>0x0)return clearInterval(timer);return cardOne[_0x318c82(0x12d)]('click',flipCard),cardTwo[_0x318c82(0x12d)](_0x318c82(0x129),flipCard),cardOne=cardTwo='',disableDeck=![];}setTimeout(()=>{const _0x3a88a1=_0x318c82;cardOne[_0x3a88a1(0x13c)]['add'](_0x3a88a1(0x13e)),cardTwo[_0x3a88a1(0x13c)]['add']('shake');},0x190),setTimeout(()=>{const _0x397c76=_0x318c82;cardOne['classList'][_0x397c76(0x11e)]('shake',_0x397c76(0x12e)),cardTwo['classList'][_0x397c76(0x11e)](_0x397c76(0x13e),_0x397c76(0x12e)),cardOne=cardTwo='',disableDeck=![];},0x4b0);}function _0x5e3a(){const _0x58d7c4=['shake','5576DLlSeE','remove','sort','querySelector','959OSDhAw','644TtLeOD','10pNgVSX','.flips\x20b','20rssZUC','2035veCcKh','.card','6ZMxHuM','click','140842qlDZcT','76852hnRNIx','37683XvlyVW','removeEventListener','flip','images/img-','forEach','1974123ntOHtd','.time\x20b','254022UejSms','random','add','10XUKcSy','.details\x20button','src','.back-view\x20img','addEventListener','innerText','classList','1212PhySLL'];_0x5e3a=function(){return _0x58d7c4;};return _0x5e3a();}function shuffleCard(){const _0x188594=_0xd7c0cd;timeLeft=maxTime,flips=matchedCard=0x0,cardOne=cardTwo='',clearInterval(timer),timeTag['innerText']=timeLeft,flipsTag[_0x188594(0x13b)]=flips,disableDeck=isPlaying=![];let _0xfd6b7f=[0x1,0x2,0x1,0x2];_0xfd6b7f[_0x188594(0x11f)](()=>Math[_0x188594(0x134)]()>0.5?0x1:-0x1),cards[_0x188594(0x130)]((_0x1454a0,_0x24ff61)=>{const _0x124edb=_0x188594;_0x1454a0[_0x124edb(0x13c)]['remove'](_0x124edb(0x12e));let _0x3347c2=_0x1454a0['querySelector'](_0x124edb(0x139));setTimeout(()=>{const _0x4e578c=_0x124edb;_0x3347c2[_0x4e578c(0x138)]=_0x4e578c(0x12f)+_0xfd6b7f[_0x24ff61]+'.png';},0x1f4),_0x1454a0[_0x124edb(0x13a)](_0x124edb(0x129),flipCard);});}shuffleCard(),refreshBtn[_0xd7c0cd(0x13a)](_0xd7c0cd(0x129),shuffleCard),cards[_0xd7c0cd(0x130)](_0x12c7f5=>{const _0x1b5261=_0xd7c0cd;_0x12c7f5[_0x1b5261(0x13a)](_0x1b5261(0x129),flipCard);});
+      </script>
+  </body>
+</html>
